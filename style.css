@@ -1,0 +1,214 @@
+/* -------------------
+   CSS Variables
+------------------- */
+:root {
+  --bg: #ffffff;
+  --text: #2b2b2b;
+  --card-bg: #ffffff;
+  --accent: #2563eb;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.top-right {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #e5e5e5;
+  --card-bg: #1e1e1e;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* -------------------
+   Base Styles
+------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* -------------------
+   Layout
+------------------- */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* -------------------
+   Header
+------------------- */
+.header {
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: var(--card-bg);
+  color: var(--accent);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* -------------------
+   Projects
+------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* -------------------
+   Skills
+------------------- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills span {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+/* -------------------
+   Footer
+------------------- */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+/* -------------------
+   Responsive
+------------------- */
+
+@media (max-width: 600px) {
+  .top-right {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+/* -------------------
+   Contact Icons
+------------------- */
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: translateY(-4px);
+  background: var(--accent);
+}
+
+.contact-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--accent);
+  transition: fill 0.3s ease;
+}
+
+.contact-icons a:hover svg {
+  fill: #ffffff;
+}
+
+.skills span {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent);
+  font-size: 0.85rem;
+  cursor: default;
+
+  /* Animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.skills span:hover {
+  transform: scale(1.2);
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card-link {
+  display: block;          /* make link behave like block */
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* inherit text color from card */
+}
+
+.card-link:hover .card {
+  transform: translateY(-5px); /* keep existing hover effect */
+}
