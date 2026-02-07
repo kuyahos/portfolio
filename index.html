@@ -16,14 +16,26 @@
   </button>
 
   <header class="header">
-    <h1>Josue Martinez</h1>
-    <p class="tagline">Computer Engineer</p>
-  </header>
+      <!-- Navigation Links -->
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <h1>Josue Martinez</h1>
+  <p class="tagline">Computer Engineer</p>
+
+
+</header>
 
   <main class="container">
 
     <!-- About -->
-    <section class="section">
+    <section class="section" id="about">
       <h2>About Me</h2>
       <p>
         A fresh graduate of Bachelor of Science in Computer Engineering seeking a challenging role where 
@@ -33,7 +45,7 @@
     </section>
 
     <!-- Projects -->
-    <section class="section">
+    <section class="section" id="projects">
       <h2>Projects</h2>
 
       <div class="projects-grid">
@@ -45,19 +57,23 @@
         </div>
        
         <div class="card">
-          <h3>Project Two</h3>
-          <p>Responsive landing page with modern UI principles.</p>
+          <a href="./assets/Patient_User_Manual.pdf" target="_blank" class="card-link">
+          <h3>Patient User Manual</h3>
+          <p>Documentation for the E-CATSULTA system.</p>
+          </a>
         </div>
 
         <div class="card">
-          <h3>Project Three</h3>
-          <p>Interactive dashboard layout with clean grid system.</p>
+          <a href="./assets/Doctor_User_Manual.pdf" target="_blank" class="card-link">
+          <h3>Doctor User Manual</h3>
+          <p>Documentation for the E-CATSULTA system.</p>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Skills -->
-    <section class="section">
+    <section class="section" id="skills">
       <h2>Skills</h2>
 
       <div class="skills">
@@ -65,6 +81,7 @@
         <span>CSS</span>
         <span>JavaScript</span>
         <span>C</span>
+        <span>C++</span>
         <span>Python</span>
         <span>PHP</span>
         <span>Laravel</span>
@@ -74,9 +91,10 @@
     </section>
 
 <!-- Contact -->
-<section class="section">
+<section class="section" id="contact" >
   <h2>Contact</h2>
-
+  <p> I'm always open to discussing new projects, creative ideas, or opportunities 
+      to be part of your vision. Feel free to reach out!</p>
   <div class="contact-icons">
     <a href="mailto:kuya.hosweh@gmail.com" aria-label="Email">
       <!-- Email Icon -->
@@ -112,7 +130,7 @@
   </main>
 
   <footer class="footer">
-    <p>© 2026 Kuya Hos</p>
+    <p>© 2026 | Kuya Hos</p>
   </footer>
 
   <script>

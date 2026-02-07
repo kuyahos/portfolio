@@ -212,3 +212,32 @@ h2 {
 .card-link:hover .card {
   transform: translateY(-5px); /* keep existing hover effect */
 }
+
+.header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.nav-list a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #007bff;
+}
